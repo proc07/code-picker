@@ -25,6 +25,21 @@ Create file -> /Desktop/code-picker/examples/alert/src/alert.vue
 
 #### Pull out the specified file and the import file included in the code
 - nr start --repo https://github.com/element-plus/element-plus/tree/dev/packages/components/form/index.ts --out ./examples
+- log
+```text
+Create file -> /Users/zhangli/Desktop/code-picker/examples/form/index.ts
+Create file -> /Users/zhangli/Desktop/code-picker/examples/form/src/form-item.vue
+Create file -> /Users/zhangli/Desktop/code-picker/examples/form/src/form.vue
+Create file -> /Users/zhangli/Desktop/code-picker/examples/form/src/form-item.ts
+Create file -> /Users/zhangli/Desktop/code-picker/examples/form/src/types.ts
+Create file -> /Users/zhangli/Desktop/code-picker/examples/form/src/constants.ts
+Create file -> /Users/zhangli/Desktop/code-picker/examples/form/src/form.ts
+Create file -> /Users/zhangli/Desktop/code-picker/examples/form/src/hooks/index.ts
+Create file -> /Users/zhangli/Desktop/code-picker/examples/form/src/form-label-wrap.tsx
+Create file -> /Users/zhangli/Desktop/code-picker/examples/form/src/utils.ts
+Create file -> /Users/zhangli/Desktop/code-picker/examples/form/src/hooks/use-form-item.ts
+Create file -> /Users/zhangli/Desktop/code-picker/examples/form/src/hooks/use-form-common-props.ts
+```
 
 ## get your github access tokens
 
