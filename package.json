@@ -1,7 +1,7 @@
 {
   "name": "code-picker",
   "type": "module",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "packageManager": "pnpm@9.5.0",
   "description": "Extract the component code needed from the component library and add it to your local project",
   "author": "proc07",
