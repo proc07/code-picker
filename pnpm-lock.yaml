@@ -34,8 +34,8 @@ importers:
         specifier: ^9.4.1
         version: 9.4.1
       code-picker:
-        specifier: ^0.0.3
-        version: 0.0.3
+        specifier: ^0.0.10
+        version: 0.0.10
       eslint:
         specifier: ^9.7.0
         version: 9.7.0
@@ -1224,8 +1224,8 @@ packages:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
 
-  code-picker@0.0.3:
-    resolution: {integrity: sha512-SiaT2fODOx4JXwovVVMAfX12boUzNgEPoX65+AATXnuCIrHwEQZtTnp3VJEhKnBoJ2ofi8vgXoYsU5+Z+3D7+w==}
+  code-picker@0.0.10:
+    resolution: {integrity: sha512-H/gkJVfj5DrJQ4BD+fgKqW4QJf2ilXx9yd354WMFI9LH3r+awn83PugUJWVPXraLsF3txl+tj9Hr8+EmF6bWSA==}
     hasBin: true
 
   color-convert@1.9.3:
@@ -4028,7 +4028,7 @@ snapshots:
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
 
-  code-picker@0.0.3:
+  code-picker@0.0.10:
     dependencies:
       cac: 6.7.14
       node-fetch: 3.3.2
