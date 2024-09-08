@@ -16,19 +16,16 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
   },
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
       "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
+        "./dist/*"
       ]
     }
   },
@@ -62,7 +59,7 @@
     "@antfu/utils": "^0.7.10",
     "@types/node": "^20.14.11",
     "bumpp": "^9.4.1",
-    "code-picker": "^0.0.2",
+    "code-picker": "^0.0.3",
     "eslint": "^9.7.0",
     "esno": "^4.7.0",
     "lint-staged": "^15.2.7",
