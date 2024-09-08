@@ -1,7 +1,7 @@
 {
   "name": "code-picker",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@9.5.0",
   "description": "Extract the component code needed from the component library and add it to your local project",
   "author": "proc07",
@@ -50,18 +50,20 @@
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
+  "dependencies": {
+    "cac": "^6.7.14",
+    "node-fetch": "^3.3.2",
+    "picocolors": "^1.1.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.23.0",
     "@antfu/ni": "^0.22.0",
     "@antfu/utils": "^0.7.10",
     "@types/node": "^20.14.11",
     "bumpp": "^9.4.1",
-    "cac": "^6.7.14",
     "eslint": "^9.7.0",
     "esno": "^4.7.0",
     "lint-staged": "^15.2.7",
-    "node-fetch": "^3.3.2",
-    "picocolors": "^1.1.0",
     "pnpm": "^9.5.0",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.5.3",
