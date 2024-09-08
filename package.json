@@ -1,7 +1,7 @@
 {
   "name": "code-picker",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "pnpm@9.5.0",
   "description": "Extract the component code needed from the component library and add it to your local project",
   "author": "proc07",
@@ -48,7 +48,8 @@
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks",
+    "cp": "code-picker --repo https://github.com/element-plus/element-plus/tree/dev/packages/components/form/index.ts --out ./examples"
   },
   "dependencies": {
     "cac": "^6.7.14",
@@ -61,6 +62,7 @@
     "@antfu/utils": "^0.7.10",
     "@types/node": "^20.14.11",
     "bumpp": "^9.4.1",
+    "code-picker": "^0.0.2",
     "eslint": "^9.7.0",
     "esno": "^4.7.0",
     "lint-staged": "^15.2.7",
