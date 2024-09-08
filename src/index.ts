@@ -1,16 +1,14 @@
-import { existsSync, mkdir, readFileSync, writeFile } from 'node:fs'
+import { existsSync, mkdir, writeFile } from 'node:fs'
 import { Buffer } from 'node:buffer'
 import path from 'node:path'
-import { fileURLToPath } from 'node:url'
+import process from 'node:process'
 import fetch from 'node-fetch'
 import cac from 'cac'
 import pc from 'picocolors'
 import type { DirRepoData, FileRepoData, RepoResult } from './type'
 import { VERSION, isDirectory, makeSureString } from './utils'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const __root = path.resolve(__dirname, '..')
-
+const __root = process.cwd()
 interface CLIOptions {
   repo: string
   outDir: string // @default: './'
@@ -180,9 +178,9 @@ async function _resolveRepos(repoData: FileRepoData | DirRepoData) {
 }
 
 async function _detectFileInDir(filePath: string) {
-  _fetchGithubRepo(path.dirname(filePath), {
+  return _fetchGithubRepo(path.dirname(filePath), {
     isScanDirectory: false,
-  }).then((res = []) => {
+  }).then((res) => {
     if (Array.isArray(res)) {
       const [filePathName] = filePath.split('/').slice(-1)
       const isFind = res.findIndex((item) => {
@@ -197,10 +195,12 @@ async function _detectFileInDir(filePath: string) {
         return false
       })
       if (isFind === -1) {
-        // import '/form/src/hooks' => import '/form/src/hooks/index.ts'
+        // import '/form/src/hooks' => import '/form/src/hooks/index.ts|js'
         _detectFileInDir(`${filePath}/index`)
       }
     }
+  }).catch((error) => {
+    console.error(pc.red(`No ${filePath} file found in the directory: `), error)
   })
 }
 
